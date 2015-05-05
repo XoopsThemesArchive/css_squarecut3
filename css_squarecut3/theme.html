@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<!-- Thank you for keeping this line :-) //-->
+<div style="display: none;">Thème développé par DuGris aka l. JEN pour (http://www.dugris.info)</div>
+
+<div id="header">
+	<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+	<div class="blockTitle">
+    	<span class="HeaderTitle"><a href="<{$xoops_url}>/">Titre du site</a></span>
+    </div>
+	<div class="blockContent"><div class="Content">
+    	<div class="HeaderMenu">
+		<a href="<{$xoops_url}>/">Menu 1</a>
+    	<a href="<{$xoops_url}>/">Menu 2</a>
+	    <a href="<{$xoops_url}>/">Menu 3</a>
+    	<a href="<{$xoops_url}>/">Menu 4</a>
+	    <a href="<{$xoops_url}>/">Menu 5</a>
+        </div>
+    </div></div>
+	<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+</div>
+
+<!-- Start left blocks loop -->
+<div id="leftcolumn">
+	<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+	<{foreach item=block from=$xoops_lblocks}>
+			<{include file="css_squarecut3/theme_blockleft.html"}>
+	<{/foreach}>
+	<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+</div>
+<!-- Start left blocks loop -->
+
+<!-- Start right blocks loop -->
+<{if $xoops_showrblock == 1}>
+	<div id="rightcolumn">
+		<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+		<{foreach item=block from=$xoops_rblocks}>
+			<{include file="css_squarecut3/theme_blockright.html"}>
+		<{/foreach}>
+		<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+	</div>
+<{/if}>
+<!-- End right blocks loop -->
+
+
+<div id="centercolumn">
+	<!-- Start center-center blocks loop -->
+	<{if $xoops_ccblocks}>
+		<div id="centerCcolumn">
+			<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+			<{foreach item=block from=$xoops_ccblocks}>
+				<{include file="css_squarecut3/theme_blockcenter_c.html"}>
+			<{/foreach}>
+			<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+		</div>
+	<{/if}>
+    <!-- Start center-center blocks loop -->
+
+	<!-- Start left blocks loop -->
+	<{if $xoops_clblocks}>
+		<div id="centerLcolumn">
+			<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+			<{foreach item=block from=$xoops_clblocks}>
+				<{include file="css_squarecut3/theme_blockcenter_l.html"}>
+			<{/foreach}>
+			<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+		</div>
+	<{/if}>
+	<!-- Start left blocks loop -->
+
+	<!-- Start center-right blocks loop -->
+	<{if $xoops_crblocks}>
+		<div id="centerRcolumn">
+			<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+			<{foreach item=block from=$xoops_crblocks}>
+				<{include file="css_squarecut3/theme_blockcenter_r.html"}>
+			<{/foreach}>
+			<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+		</div>
+	<{/if}>
+	<!-- Start center-right blocks loop -->
+
+	<{if $xoops_contents}>
+		<div id="content">
+			<{$xoops_contents}>
+		</div>
+	<{/if}>
+
+    <!-- Bottom blocks -->
+    <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+
+		<!-- Start bottom center-center blocks loop -->
+        <{if $xoBlocks.page_bottomcenter}>
+			<div id="centerCcolumn">
+				<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+				<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+					<{include file="css_squarecut3/theme_blockcenter_c.html"}>
+				<{/foreach}>
+				<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+			</div>
+		<{/if}>
+		<!-- Start bottom center-center blocks loop -->
+
+		<!-- Start bottom left blocks loop -->
+		<{if $xoBlocks.page_bottomleft}>
+			<div id="centerLcolumn">
+				<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+				<{foreach from=$xoBlocks.page_bottomleft item=block}>
+					<{include file="css_squarecut3/theme_blockcenter_l.html"}>
+				<{/foreach}>
+				<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+			</div>
+		<{/if}>
+		<!-- Start bottom left blocks loop -->
+
+		<!-- Start bottom center-right blocks loop -->
+		<{if $xoBlocks.page_bottomright}>
+			<div id="centerRcolumn">
+				<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+				<{foreach from=$xoBlocks.page_bottomright item=block}>
+					<{include file="css_squarecut3/theme_blockcenter_r.html"}>
+				<{/foreach}>
+				<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+			</div>
+		<{/if}>
+		<!-- Start bottom center-right blocks loop -->
+
+	<{/if}>
+    <!-- Bottom blocks -->
+</div>
+
+<div id="footer">
+	<b class="top"><b class="b1t"></b><b class="b2"></b></b>
+	<div class="blockContent"><div class="Content">
+	<{$xoops_footer}>
+	<br />
+	Design by <a href="http://www.dugris.info" target="_blank">DuGris</a> - <a href="http://www.frxoops.org/" target="_blank">XOOPS France</a>
+    </div></div>
+	<b class="bot"><b class="b2"></b><b class="b1b"></b></b>
+</div>
+<!--[if lte IE 6]>
+<br />
+<![endif]-->
+
+<script type="text/Javascript">
+	<!--
+	istat = new Image(1,1);
+	istat.src = "<{$xoops_url}>/modules/istats/include/counter.php?sw="+screen.width+"&sc="+screen.colorDepth+"&referer="+escape(document.referer)+"&urlref="+location.href;
+	//-->
+</script>
+
+</body>
+</html>
